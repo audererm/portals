@@ -28,6 +28,7 @@ public class Portals extends JavaPlugin implements Listener {
     @Override
     public void onEnable()
     {
+        getServer().getPluginManager().registerEvents(this, this);
         creationMap = new HashMap<>();
         portalFile = new File(getDataFolder().getPath() + "/portals.dat");
         Bukkit.getLogger().info("Enabling portals...");
