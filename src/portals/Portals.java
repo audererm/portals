@@ -32,6 +32,18 @@ public class Portals extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         creationMap = new HashMap<>();
         portalFile = new File(getDataFolder().getPath() + "/portals.dat");
+        if (!portalFile.exists())
+        {
+            getDataFolder().mkdir();
+            try
+            {
+                portalFile.createNewFile();
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
         Bukkit.getLogger().info("Enabling portals...");
     }
     
