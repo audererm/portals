@@ -15,6 +15,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import portals.CreationState.State;
 
 /**
  *
@@ -95,7 +96,8 @@ public class Portals extends JavaPlugin implements Listener {
                 {
                     case FIRST_BLOCK:
                         state.firstBlock = event.getClickedBlock();
-                        player.sendMessage("Please click the second block.");
+                        state.state = State.LAST_BLOCK;
+                        player.sendMessage("Please right-click the second block.");
                         creationMap.put(player, state);
                         break;
                     case LAST_BLOCK:
