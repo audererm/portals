@@ -1,0 +1,6 @@
+commands:
+   createportal:
+      description: Creates a portal to another world or location.
+      usage: /<command> [world]
+      permission: <plugin name>.create
+      permission-message: You don't have permission to do this.
