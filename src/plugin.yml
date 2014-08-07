@@ -1,3 +1,6 @@
+name: Portals
+main: portals.Portals
+version: 0.1
 commands:
    createportal:
       description: Creates a portal to another world or location.
