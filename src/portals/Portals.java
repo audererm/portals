@@ -75,7 +75,7 @@ public class Portals extends JavaPlugin implements Listener
                 e.printStackTrace();
             }
         }
-        Bukkit.getLogger().info("Enabling portals...");
+        Bukkit.getLogger().info("Portals is now enabled.");
     }
     
     private Location csvLocation(World world, String csv)
