@@ -88,6 +88,10 @@ public class Portals extends JavaPlugin implements Listener
     @Override
     public void onDisable()
     {
+        for (PortalRegion portal : portals)
+        {
+            portal.savePortal(portalFile);
+        }
         Bukkit.getLogger().info("Portals is now disabled.");
     }
     
